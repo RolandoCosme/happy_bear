@@ -27,9 +27,19 @@ var addBears = function () {
   });
 }
 
+var deleteBears = function () {
+  var query = "DELETE FROM happy_bears WHERE id=?";
+  var idToBeDeleted = 5; //user input
+  connection.query(query, idToBeDeleted, function(err, results) {
+    if (err) throw err;
+    console.log("deleted bears");
+  });
+}
+
 
 
 showBears();
 addBears();
- 
+ deleteBears();
+
 connection.end();

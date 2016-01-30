@@ -40,6 +40,6 @@ var deleteBears = function () {
 
 showBears();
 addBears();
- deleteBears();
+deleteBears();
 
 connection.end();
